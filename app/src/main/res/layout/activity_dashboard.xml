@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mastertv_background">
+
+    <!-- Left menu (simple vertical list) -->
+    <LinearLayout
+        android:id="@+id/leftMenu"
+        android:orientation="vertical"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:padding="18dp"
+        android:background="#0b0520">
+
+        <TextView
+            android:id="@+id/menuChannels"
+            android:text="Canais Ao Vivo"
+            android:textColor="@color/mastertv_accent"
+            android:textSize="20sp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/menuMovies"
+            android:text="Filmes"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/menuSeries"
+            android:text="Séries"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/menuSettings"
+            android:text="Configurações"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <!-- Container for fragments -->
+    <FrameLayout
+        android:id="@+id/containerFragment"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

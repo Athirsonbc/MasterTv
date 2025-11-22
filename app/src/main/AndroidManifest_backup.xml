@@ -3,8 +3,6 @@
     package="com.mastertv.app">
 
     <application
-        <activity android:name=".ui.dashboard.DashboardActivity" android:exported="true"/>
-        <activity android:name=".ui.details.DetailActivity" android:exported="false"/>
         android:label="Master TV"
         android:theme="@style/Theme.MasterTV">
 
