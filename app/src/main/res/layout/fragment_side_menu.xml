@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#151515"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/btnHome"
+        android:text="Início"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/btnConta"
+        android:text="Minha Conta"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/btnSair"
+        android:text="Sair"
+        android:textColor="#ff4444"
+        android:textSize="20sp" />
+
+</LinearLayout>

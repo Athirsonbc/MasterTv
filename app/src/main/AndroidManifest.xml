@@ -1,24 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:label="Master TV"
-        android:banner="@drawable/ic_banner"
-        android:logo="@drawable/ic_banner"
-        android:icon="@drawable/ic_logo"
-        android:roundIcon="@drawable/ic_logo"
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:banner="@drawable/ic_banner"
-            android:launchMode="singleTask">
+            android:name=".PlayerActivity"
+            android:exported="true" />
 
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
-
         </activity>
 
     </application>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <TextView
+        android:text="MasterTV"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#8B00FF"
+        android:layout_marginBottom="40dp" />
+
+    <EditText
+        android:id="@+id/edtUser"
+        android:hint="Usuário"
+        android:background="#222"
+        android:textColor="#fff"
+        android:textColorHint="#888"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edtPass"
+        android:hint="Senha"
+        android:background="#222"
+        android:textColor="#fff"
+        android:textColorHint="#888"
+        android:padding="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:text="Entrar"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnTesteGratis"
+        android:text="Gerar Teste Grátis (4 horas)"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8B00FF"
+        android:textColor="#fff"/>
+
+</LinearLayout>
