@@ -1,22 +1,20 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <uses-permission android:name="android.permission.INTERNET" />
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mastertv.app">
 
     <application
         android:label="Master TV"
-        android:usesCleartextTraffic="true">
+        android:theme="@style/Theme.MasterTV">
 
-        <activity
-            android:name=".PlayerActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".ui.main.MainActivity"
             android:exported="true">
+
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
         </activity>
 
     </application>

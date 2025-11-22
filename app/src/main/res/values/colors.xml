@@ -1,6 +1,6 @@
 <resources>
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
-    <color name="purple_700">#8B00FF</color>
-    <color name="purple_500">#A64AFF</color>
+    <color name="mastertv_primary">#6C2BD9</color>
+    <color name="mastertv_dark">#1C053A</color>
+    <color name="mastertv_accent">#B57BFF</color>
+    <color name="mastertv_background">#0D031A</color>
 </resources>
