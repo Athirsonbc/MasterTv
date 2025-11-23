@@ -3,48 +3,32 @@ name: Android CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      # Instalar JDK 17
       - name: Set up JDK 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      # Instalar Android SDK
-      - name: Install Android SDK
+      - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      # Aceitar licenças
-      - name: Accept Android Licenses
-        run: yes | sdkmanager --licenses
-
-      # Build Debug e Release
-      - name: Build Debug
-        run: ./gradlew assembleDebug --stacktrace
+      - name: Grant execute permission
+        run: chmod +x ./gradlew
 
       - name: Build Release
         run: ./gradlew assembleRelease --stacktrace
 
-      # Upload dos APKs como artefatos
-      - name: Upload Debug APK
-        uses: actions/upload-artifact@v3
-        with:
-          name: MasterTV-debug
-          path: app/build/outputs/apk/debug/*.apk
-
       - name: Upload Release APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: MasterTV-release
           path: app/build/outputs/apk/release/*.apk
