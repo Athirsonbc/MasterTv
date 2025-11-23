@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="detail_title">#FFFFFFFF</color>
+    <color name="detail_sub">#DDDDDD</color>
+    <color name="detail_accent">#B57BFF</color>
+    <color name="detail_overlay">#80000000</color>
+</resources>

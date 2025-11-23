@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/full_overlay_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Backing player will be added as StyledPlayerView by activity -->
+    <!-- Top overlay (title + subtitle) -->
+    <LinearLayout
+        android:id="@+id/overlayTop"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="28dp"
+        android:layout_gravity="top"
+        android:focusable="false">
+
+        <TextView
+            android:id="@+id/tvOverlayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Título do episódio"
+            android:textSize="22sp"
+            android:textColor="@color/mastertv_accent"/>
+
+        <TextView
+            android:id="@+id/tvOverlaySubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sinopse breve..."
+            android:layout_marginTop="8dp"
+            android:textColor="#DDDDDD"/>
+
+    </LinearLayout>
+
+    <!-- Skip intro button -->
+    <Button
+        android:id="@+id/btnSkipIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Pular intro"
+        android:layout_gravity="top|end"
+        android:visibility="gone"
+        android:focusable="true"/>
+
+    <!-- Next episode overlay centered -->
+    <LinearLayout
+        android:id="@+id/nextOverlay"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvNextLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Próximo episódio em 7s..."
+            android:textSize="18sp"
+            android:textColor="@color/mastertv_accent"/>
+
+        <ImageView
+            android:id="@+id/imgNextThumb"
+            android:layout_width="240dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tvNextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Título próximo"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnPlayNextNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ir para o próximo agora"
+            android:layout_marginTop="12dp"
+            android:focusable="true"/>
+    </LinearLayout>
+
+</FrameLayout>

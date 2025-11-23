@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mastertv_background">
+
+    <!-- Background poster (we'll load poster and apply blur via Glide transformation if available) -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.25"/>
+
+    <!-- dark overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/detail_overlay"/>
+
+    <!-- Main content -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Poster -->
+        <ImageView
+            android:id="@+id/imgPoster"
+            android:layout_width="360dp"
+            android:layout_height="540dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Poster"
+            android:src="@drawable/ic_banner" />
+
+        <!-- Right content -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginStart="24dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:text="Título do Conteúdo"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/detail_title"/>
+
+            <TextView
+                android:id="@+id/tvMeta"
+                android:text="Ano • Duração • Classificação"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/detail_sub"/>
+
+            <!-- Buttons row -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnWatch"
+                    android:text="Assistir"
+                    android:layout_marginEnd="12dp"/>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:text="Minha Lista"
+                    android:layout_marginEnd="12dp"/>
+
+                <Button
+                    android:id="@+id/btnTrailer"
+                    android:text="Trailer"/>
+            </LinearLayout>
+
+            <!-- Sinopse -->
+            <TextView
+                android:id="@+id/tvSynopsis"
+                android:text="Sinopse..."
+                android:textColor="@color/detail_sub"
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="6"
+                android:ellipsize="end"/>
+
+            <!-- Seasons / Episodes Title -->
+            <TextView
+                android:id="@+id/tvSeasonsLabel"
+                android:text="Temporadas"
+                android:textSize="18sp"
+                android:textColor="@color/detail_title"
+                android:layout_marginTop="20dp"/>
+
+            <!-- Seasons horizontal list (RecyclerView) -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSeasons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <!-- Episodes list (vertical) - will show episodes of selected season -->
+            <TextView
+                android:id="@+id/tvEpisodesLabel"
+                android:text="Episódios"
+                android:textSize="18sp"
+                android:textColor="@color/detail_title"
+                android:layout_marginTop="16dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEpisodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

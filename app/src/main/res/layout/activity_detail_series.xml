@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_series_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mastertv_background">
+
+    <!-- Background poster (dimmed) -->
+    <ImageView
+        android:id="@+id/imgBgSeries"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0.22"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Poster large -->
+        <ImageView
+            android:id="@+id/imgPosterSeries"
+            android:layout_width="360dp"
+            android:layout_height="540dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Poster"/>
+
+        <!-- Right column -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginStart="24dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvSeriesTitle"
+                android:text="Título da Série"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/detail_title"/>
+
+            <TextView
+                android:id="@+id/tvSeriesMeta"
+                android:text="Ano • Temporadas • Classificação"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/detail_sub"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnPlayFirst"
+                    android:text="Assistir"
+                    android:layout_marginEnd="12dp"/>
+
+                <Button
+                    android:id="@+id/btnAddList"
+                    android:text="Minha Lista"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSeriesSynopsis"
+                android:text="Sinopse..."
+                android:textColor="@color/detail_sub"
+                android:layout_marginTop="18dp"
+                android:maxLines="6"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tvSeasonsLabelSeries"
+                android:text="Temporadas"
+                android:textSize="18sp"
+                android:textColor="@color/detail_title"
+                android:layout_marginTop="20dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSeasonsSeries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvEpisodesLabelSeries"
+                android:text="Episódios"
+                android:textSize="18sp"
+                android:textColor="@color/detail_title"
+                android:layout_marginTop="16dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEpisodesSeries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

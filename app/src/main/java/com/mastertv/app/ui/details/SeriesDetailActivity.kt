@@ -3,18 +3,16 @@ package com.mastertv.app.ui.details
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
-import com.mastertv.app.models.Channel
 
-class DetailActivity : AppCompatActivity() {
+class SeriesDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Create fragment and pass channel JSON
         val chJson = intent.getStringExtra("channelJson")
-        val frag = DetailFragment()
+        val frag = SeriesDetailFragment()
         if (chJson != null) {
             val b = Bundle()
-            b.putString(DetailFragment.ARG_CHANNEL, chJson)
+            b.putString(SeriesDetailFragment.ARG_CHANNEL, chJson)
             frag.arguments = b
         }
         supportFragmentManager.beginTransaction().replace(android.R.id.content, frag).commit()
